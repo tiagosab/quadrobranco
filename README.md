@@ -29,4 +29,5 @@ my workstation at my job. So I have made a portable usb stick from
 which I can run all I need, and that includes emacs and git. But to
 include ssh on it was overkill, so I switch my authentication method
 on github from ssh keypairs to github tokens, and I am using the
-[include] directive in my gitconfig.
+[include] directive in my gitconfig, but it is not enough. On windows
+it is working, but on linux it keeps asking me for my password.
