@@ -21,3 +21,12 @@ And as a side effect, I can no longer manage my network-manager system
 connections from my user, I have to resort to the root account.
 
 780346: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=780346
+
+# gitconfig include
+
+I recently felt the need to remove any personal programs and data from
+my workstation at my job. So I have made a portable usb stick from
+which I can run all I need, and that includes emacs and git. But to
+include ssh on it was overkill, so I switch my authentication method
+on github from ssh keypairs to github tokens, and I am using the
+[include] directive in my gitconfig.
