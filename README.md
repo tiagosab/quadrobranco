@@ -31,3 +31,6 @@ include ssh on it was overkill, so I switch my authentication method
 on github from ssh keypairs to github tokens, and I am using the
 [include] directive in my gitconfig, but it is not enough. On windows
 it is working, but on linux it keeps asking me for my password.
+
+# going portable
+Let's make a new file to discuss [issues with going portable](portable.md)...
