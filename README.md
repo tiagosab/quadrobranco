@@ -39,40 +39,4 @@ Let's make a new file to discuss
 
 # Open a file with the default application
 
-This has bothered me for years now. Debian misses a clear way of
-defining default applications. Each desktop manager has its own (more
-or less unified by the use of .desktop files), debian has its
-dpkg-alternatives, there's mimeopen, run-mailcap, xdg-mime and
-xdg-open. How can one sanitize that?
-
-## xdg-open
-
-xdg-open is only a wrapper over all the other alternatives (except
-possibly for dpkg-alternatives, but this one serves another
-purpose). It tries to guess in which window manager you are, in order
-to run the preferred launcher (kde-open or kfmclient on kde, exo-open
-on xfce, mate-open on mate, gvfs-open or gnome-open on gnome, open on
-darwin). If it does not find the window manager, it tries xdg-mime,
-mime-open, and run-mailcap, in this order. If all else fails, it tries
-xdg-mime again with a filetype of x-scheme-handler/$scheme (WTF?), and
-then open with a browser (disclaimer: I am not sure of this last
-sentence, as I have not had the patience to fully understand this part
-of the code of xdg-open).
-
-## xdg-mime
-
-xdg-mime looks for entries in .local/share/applications/mimeapps.list
-and /usr/share/applications/mimeinfo.cache (AFAICS; in theory in both
-dirs we could have the files mimeapps.list, mimeinfo.cache and
-defaults.list - according to
-[radevic](http://blog.radevic.com/2012/02/how-to-set-default-apps-aka-how-to-use.html) -
-I have not tried to follow this path).
-
-One can add a default personal application using e.g. `xdg-mime default
-evince.desktop application/pdf`. It will work if you have an
-evince.desktop file in /usr/share/applications, and the result will be
-a new line on .local/share/applications/mimeapps.list.
-
-## The others
-
-More on that later, surely.
+[default application](defaultapp.md)
