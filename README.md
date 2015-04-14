@@ -29,7 +29,11 @@ my workstation at my job. So I have made a portable usb stick from
 which I can run all I need, and that includes emacs and git. But to
 include ssh on it was overkill, so I switch my authentication method
 on github from ssh keypairs to github tokens, and I am using the
-[include] directive in my gitconfig.
+[include] directive in my gitconfig, but it is not enough. On windows
+it is working, but on linux it keeps asking me for my password.
+
+# going portable Let's make a new file to discuss
+[issues with going portable](portable.md)...
 
 # Open a file with the default application
 
@@ -58,15 +62,14 @@ of the code of xdg-open).
 xdg-mime looks for entries in .local/share/applications/mimeapps.list
 and /usr/share/applications/mimeinfo.cache (AFAICS; in theory in both
 dirs we could have the files mimeapps.list, mimeinfo.cache and
-defaults.list - according to [radevic] - I have not tried to follow this
-path).
+defaults.list - according to
+[radevic](http://blog.radevic.com/2012/02/how-to-set-default-apps-aka-how-to-use.html) -
+I have not tried to follow this path).
 
 One can add a default personal application using e.g. `xdg-mime default
 evince.desktop application/pdf`. It will work if you have an
 evince.desktop file in /usr/share/applications, and the result will be
 a new line on .local/share/applications/mimeapps.list.
-
-[radevic] - http://blog.radevic.com/2012/02/how-to-set-default-apps-aka-how-to-use.html
 
 ## The others
 
