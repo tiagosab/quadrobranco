@@ -10,6 +10,10 @@ But how I should put my freshly made root password in the settings file, commit 
 
 There is no official way of separating secret data from settings, but there are lots of discusssions about that on the net. The approach I chose was making a separate secret-settings.py, and import it from settings.py. Details are available on the Fullofcode blog (see below).
 
+Having made the config, I thought it was time to commit some of my work. But I was not sure on how to effectively do that, so I did a little research on the web and some local experiments - and everything broke. When I realized that I could not simply rename and move the directories, it was to late, and it was easier to restart from scratch than to try to revert all the consequencies of the experiments.
+
+So I started over, only to find out that I was not able to make the first needed django command (migrate), because it could not find the mysql python package. It turns out that apparently there is no mysql python backend for debian jessie, and the solution that finally worked involved the installation on the system of python3-dev and libmysqlclient-dev, followed by the installation on the virtualenv of mysqlclient.
+
 ## Further reading:
 - django docs
 - mysql docs
